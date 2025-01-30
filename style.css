@@ -1,0 +1,100 @@
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+#skills .col-lg-6,
+#skills .col-lg-3 {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+/* Custom CSS for Back to Top Button */
+#back-to-top {
+  background-color: #007bff; /* Primary color */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: all 0.3s ease; /* Smooth transitions */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100%); /* Start offscreen (below) */
+}
+
+#back-to-top.show {
+  opacity: 1; /* Visible */
+  transform: translateY(0); /* Pop up to original position */
+  animation: pop-up 0.5s ease; /* Pop-up animation */
+}
+
+/* Pop-up animation */
+@keyframes pop-up {
+  0% {
+    transform: translateY(100%); /* Start below */
+  }
+  50% {
+    transform: translateY(-10px); /* Slight overshoot */
+  }
+  100% {
+    transform: translateY(0); /* Settle in place */
+  }
+}
+
+#back-to-top:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* Custom CSS for Hover Effect */
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+/* Custom CSS for Timeline and Hover Effects */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #007bff; /* Timeline line color */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #007bff; /* Timeline dot color */
+  border: 3px solid white; /* Add a border to the dot */
+}
+
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
