@@ -1,24 +1,28 @@
-// JavaScript for Back to Top Button
-document.addEventListener("DOMContentLoaded", function () {
+// Optimized Scroll to Top Button Functionality
+document.addEventListener("DOMContentLoaded", function() {
   const backToTopButton = document.getElementById("back-to-top");
-
-  // Show/hide button based on scroll position
-  window.addEventListener("scroll", function () {
+  
+  // Show/hide button with fade effect
+  window.addEventListener("scroll", function() {
     if (window.scrollY > 300) {
       backToTopButton.style.display = "block";
-      setTimeout(() => backToTopButton.classList.add("show"), 10); // Add show class with delay
+      setTimeout(() => backToTopButton.classList.add("show"), 10);
     } else {
       backToTopButton.classList.remove("show");
-      setTimeout(() => (backToTopButton.style.display = "none"), 300); // Hide after fade-out
+      setTimeout(() => {
+        if (window.scrollY <= 300) {
+          backToTopButton.style.display = "none";
+        }
+      }, 300);
     }
   });
 
   // Smooth scroll to top
-  backToTopButton.addEventListener("click", function (e) {
-    e.preventDefault(); // Prevent default anchor behavior
+  backToTopButton.addEventListener("click", function(e) {
+    e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scrolling
+      behavior: "smooth"
     });
   });
 });
